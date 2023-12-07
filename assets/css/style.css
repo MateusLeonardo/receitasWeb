@@ -12,6 +12,10 @@
   max-width: 1240px;
   margin: 0 auto;
 }
+.container-2 {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
 * {
   margin: 0;
@@ -245,4 +249,124 @@ a {
 
 .comunidade {
   padding-top: 8rem;
+  padding-bottom: 5rem;
+  position: relative;
+}
+.comunidade h1 {
+  font-size: 2.875rem;
+  text-align: center;
+  padding-bottom: 4.38rem;
+  font-weight: 600;
+}
+.comunidade-grid {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  /* padding-top: 2rem; */
+  padding: 20px;
+}
+.post-item {
+  flex: 0 0 auto;
+  width: calc(50% - 5px);
+  scroll-snap-align: start;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+.post-item .header-item {
+  display: flex;
+  align-items: center;
+  gap: 2.19rem;
+}
+.post-item .header-item .img img {
+  border-radius: 50%;
+}
+.post-item .header-item .title h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+.post-item .header-item .title span {
+  display: block;
+  color: var(--color-gray);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.post-item .stars-item {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.post-item .commentario-item p {
+  font-weight: 300;
+  line-height: 1.5rem;
+  max-width: 53ch;
+  text-align: left;
+}
+.post-item .imagem-item {
+  padding-top: 1rem;
+}
+.post-item .imagem-item img {
+  border-radius: 0.875rem;
+}
+.post-item .curtir-compartilhar span {
+  font-size: 1.25rem;
+}
+.post-item .curtir-compartilhar .curtir {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.arrow-left, .arrow-right {
+  position: absolute;
+  border: 1px solid var(--color-gray);
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.arrow-left:hover,
+.arrow-right:hover {
+  background: #D9D9D9;
+}
+
+.arrow-left {
+  top: 60%;
+  left: -1.2rem;
+}
+.arrow-right {
+  top: 60%;
+  right: -2rem;
+}
+
+
+
+.app-download {
+  padding: 5.31rem 0 0 4.31rem;
+  background: var(--color-green);
+  display: flex;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
+}
+
+.app-download .content h1 {
+  font-size: 2.875rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+.app-download .content .link-app {
+  display: flex;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.app-download .content .link-app a {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  background: var(--color-yellow);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  gap: 10px;
 }
