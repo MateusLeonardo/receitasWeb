@@ -2,10 +2,10 @@
   --color-white: #ffffff;
   --color-primary: #f3f3f3;
   --color-secondary: #312f2f;
-  --color-green: #046E1B;
-  --color-blue: #75B8EE;
-  --color-yellow: #F79F1A;
-  --color-gray: #7F7D7D;
+  --color-green: #046e1b;
+  --color-blue: #75b8ee;
+  --color-yellow: #f79f1a;
+  --color-gray: #7f7d7d;
 }
 
 .container {
@@ -21,7 +21,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 body {
   padding: 0 10px;
@@ -60,18 +60,14 @@ a {
 }
 
 .search-login {
-  padding: .5rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
-
-
-
 
 .main {
   display: flex;
   gap: 1rem;
-  height: calc(100vh - 76px);
-  padding-top: 10rem;
+  padding-top: 11rem;
 }
 .main .left-content h1 {
   font-size: 4rem;
@@ -104,7 +100,13 @@ a {
   max-width: 634px;
 }
 
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    padding-top: 0;
 
+  }
+}
 
 .receitas {
   padding-bottom: 10.5rem;
@@ -151,12 +153,12 @@ a {
   gap: 1.88rem;
   position: relative;
   margin-top: -2rem;
-  background: rgba(255, 255, 255, 0.60);
-  padding: .5rem;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem;
   color: var(--color-green);
   font-weight: 500;
 }
- .receita-title {
+.receita-title {
   padding: 1rem 1rem 2rem;
 }
 .receita-title h1 {
@@ -174,13 +176,23 @@ a {
   height: 1px;
   background: var(--color-yellow);
 }
-
-
-
+@media (max-width: 768px) {
+  .receitas header .left-content p {
+    max-width: 30ch;
+  }
+  .receitas header a {
+    width: 170px;
+    text-align: center;
+  }
+  .receitas-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
 
 .sobre {
   display: flex;
-  background: url('../img/saladaAbacaxi.png') no-repeat;
+  background: url("../img/saladaAbacaxi.png") no-repeat;
   gap: 3rem;
   border-radius: 1rem;
 }
@@ -222,10 +234,10 @@ a {
   position: relative;
 }
 .sobre .right-content .content h2:after {
-  content: '';
+  content: "";
   position: absolute;
   display: inline-block;
-  background: url('../img/pao.png') no-repeat;
+  background: url("../img/pao.png") no-repeat;
   width: 7.5rem;
   height: 7.5rem;
   top: -3rem;
@@ -244,6 +256,19 @@ a {
   border-radius: 1.25rem;
   color: var(--color-primary);
 }
+
+@media(max-width:768px) {
+  .sobre {
+    flex-direction: column;
+  }
+  .sobre .right-content {
+    padding: 0 0 3rem 1rem;
+  }
+  .sobre .left-content .content {
+    padding-top: 1rem;
+  }
+}
+
 
 
 
@@ -271,7 +296,7 @@ a {
   scroll-snap-align: start;
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
 .post-item .header-item {
   display: flex;
@@ -317,7 +342,17 @@ a {
   align-items: center;
   gap: 0.5rem;
 }
-.arrow-left, .arrow-right {
+
+@media(max-width: 768px) {
+  .comunidade-grid .post-item{
+    width: 100%;
+
+  }
+}
+
+
+.arrow-left,
+.arrow-right {
   position: absolute;
   border: 1px solid var(--color-gray);
   display: inline-block;
@@ -328,7 +363,7 @@ a {
 }
 .arrow-left:hover,
 .arrow-right:hover {
-  background: #D9D9D9;
+  background: #d9d9d9;
 }
 
 .arrow-left {
@@ -340,7 +375,14 @@ a {
   right: -2rem;
 }
 
-
+@media(max-width: 768px){
+  .arrow-left {
+    left: -0.5rem;
+  }
+  .arrow-right {
+    right: -0.5rem;
+  }
+}
 
 .app-download {
   padding: 5.31rem 0 0 4.31rem;
@@ -359,6 +401,7 @@ a {
   display: flex;
   gap: 2rem;
   padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .app-download .content .link-app a {
@@ -371,6 +414,14 @@ a {
   gap: 10px;
 }
 
+@media (max-width: 768px) {
+  .app-download {
+    flex-direction: column;
+    padding: 3rem;
+    margin-bottom: 0;
+  }
+
+}
 
 .footer {
   display: flex;
@@ -396,7 +447,7 @@ a {
   padding-bottom: 3rem;
 }
 .footer .right-content form input {
-  padding: .6rem 1rem;
+  padding: 0.6rem 1rem;
   width: 100%;
   border: none;
   border-bottom: 2px solid var(--color-yellow);
@@ -412,4 +463,22 @@ a {
   padding: 1.25rem 2.5rem;
   margin-top: 1rem;
   cursor: pointer;
+}
+
+@media(max-width:768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 4rem;
+  }
+  .footer .right-content {
+    order: 1;
+  }
+  .footer .left-content {
+    order: 2;
+  }
+  .footer .right-content form input {
+    width: max-content;
+  }
 }
