@@ -12,6 +12,7 @@
   max-width: 1240px;
   margin: 0 auto;
 }
+
 .container-2 {
   max-width: 1440px;
   margin: 0 auto;
@@ -23,13 +24,16 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
 body {
   padding: 0 10px;
   background: var(--color-primary);
 }
+
 img {
   max-width: 100%;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -45,6 +49,7 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
   color: var(--color-green);
   display: flex;
@@ -71,6 +76,7 @@ a {
   gap: 1rem;
   padding-top: 11rem;
 }
+
 .main .left-content h1 {
   font-size: 4rem;
   font-weight: 700;
@@ -78,6 +84,7 @@ a {
   line-height: 5rem;
   padding-bottom: 2.31rem;
 }
+
 .main .left-content p {
   font-weight: 300;
   color: var(--color-gray);
@@ -85,10 +92,12 @@ a {
   line-height: 1.5rem;
   padding-bottom: 3.81rem;
 }
+
 .main .left-content span {
   color: var(--color-yellow);
   display: inline-block;
 }
+
 .main .left-content a {
   color: var(--color-primary);
   background: var(--color-yellow);
@@ -98,6 +107,7 @@ a {
   border-radius: 1.25rem;
   font-weight: 600;
 }
+
 .right-content img {
   max-width: 634px;
 }
@@ -106,11 +116,37 @@ a {
   .main {
     flex-direction: column;
     padding-top: 0;
-
+    gap: 4rem;
   }
 }
+
 @media(max-width: 375px) {
-  .right-content img {
+  .main .left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main .left-content h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .main .left-content p {
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+  }
+
+  .main .left-content a {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .main .right-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main .right-content img {
     max-width: 300px;
   }
 }
@@ -118,6 +154,7 @@ a {
 .receitas {
   padding-bottom: 10.5rem;
 }
+
 .receitas header {
   padding-top: 6.25rem;
   padding-bottom: 4.38rem;
@@ -125,35 +162,42 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+
 .receitas header .left-content h1 {
   font-size: 2.875rem;
   font-weight: 600;
   letter-spacing: -0.04888rem;
 }
+
 .receitas header .left-content p {
   font-size: 1.5rem;
   font-weight: 300;
   color: var(--color-gray);
 }
+
 .receitas header a {
   background: var(--color-yellow);
   padding: 1.25rem 2.5rem;
   border-radius: 1.25rem;
   color: var(--color-primary);
 }
+
 .receitas-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3.56rem;
 }
+
 .receita-card {
   background: var(--color-white);
   border-radius: 1.25rem;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
 }
-.receita-card > img {
+
+.receita-card>img {
   border-radius: 1.25rem 1.25rem 0 0;
 }
+
 .receita-desc {
   display: flex;
   justify-content: center;
@@ -165,17 +209,21 @@ a {
   color: var(--color-green);
   font-weight: 500;
 }
+
 .receita-title {
   padding: 1rem 1rem 2rem;
 }
+
 .receita-title h1 {
   font-size: 2rem;
   font-weight: 600;
   padding-bottom: 0.94rem;
 }
+
 .receita-title a {
   color: var(--color-yellow);
 }
+
 .receita-title a::after {
   display: block;
   content: "";
@@ -183,24 +231,39 @@ a {
   height: 1px;
   background: var(--color-yellow);
 }
+
 @media (max-width: 768px) {
   .receitas header .left-content p {
     max-width: 30ch;
   }
+
   .receitas header a {
     width: 170px;
     text-align: center;
   }
+
   .receitas-container {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 }
+
 @media(max-width: 375px) {
   .receitas header {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
+
+  .receitas header .left-content h1 {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .receitas header .left-content p {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+
   .receitas-container {
     grid-template-columns: 1fr;
 
@@ -213,13 +276,16 @@ a {
   gap: 3rem;
   border-radius: 1rem;
 }
+
 .sobre .left-content,
 .sobre .right-content {
   flex: 1;
 }
+
 .sobre .left-content {
   display: flex;
 }
+
 .sobre .left-content .content {
   display: flex;
   flex-direction: column;
@@ -228,21 +294,25 @@ a {
   padding-bottom: 4rem;
   padding-left: 3rem;
 }
+
 .sobre .left-content .content .title {
   background: var(--color-white);
   padding: 1rem;
   border-radius: 0.6rem;
   color: var(--color-green);
 }
+
 .sobre .right-content {
   padding: 5.31rem 8.25rem 7.12rem 0;
 }
+
 .sobre .right-content .content {
   background: var(--color-white);
   max-width: 36rem;
   padding: 2rem;
   border-radius: 1.25rem;
 }
+
 .sobre .right-content .content h2 {
   font-size: 2.875rem;
   font-weight: 600;
@@ -250,6 +320,7 @@ a {
   padding-bottom: 1rem;
   position: relative;
 }
+
 .sobre .right-content .content h2:after {
   content: "";
   position: absolute;
@@ -260,6 +331,7 @@ a {
   top: -3rem;
   right: 1rem;
 }
+
 .sobre .right-content .content p {
   font-size: 1.25rem;
   font-weight: 400;
@@ -267,6 +339,7 @@ a {
   padding-bottom: 2rem;
   color: var(--color-secondary);
 }
+
 .sobre .right-content .content a {
   background: var(--color-yellow);
   padding: 0.875rem 3rem;
@@ -278,9 +351,11 @@ a {
   .sobre {
     flex-direction: column;
   }
+
   .sobre .right-content {
     padding: 0 0 3rem 1rem;
   }
+
   .sobre .left-content .content {
     padding-top: 1rem;
   }
@@ -294,12 +369,14 @@ a {
   padding-bottom: 5rem;
   position: relative;
 }
+
 .comunidade h1 {
   font-size: 2.875rem;
   text-align: center;
   padding-bottom: 4.38rem;
   font-weight: 600;
 }
+
 .comunidade-grid {
   display: flex;
   gap: 20px;
@@ -307,6 +384,7 @@ a {
   /* padding-top: 2rem; */
   padding: 20px;
 }
+
 .post-item {
   flex: 0 0 auto;
   width: calc(50% - 5px);
@@ -315,44 +393,54 @@ a {
   padding: 2rem;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
+
 .post-item .header-item {
   display: flex;
   align-items: center;
   gap: 2.19rem;
 }
+
 .post-item .header-item .img img {
   border-radius: 50%;
 }
+
 .post-item .header-item .title h2 {
   font-size: 1.5rem;
   font-weight: 600;
   padding-bottom: 0.5rem;
 }
+
 .post-item .header-item .title span {
   display: block;
   color: var(--color-gray);
   font-size: 1rem;
   font-weight: 300;
 }
+
 .post-item .stars-item {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
 .post-item .commentario-item p {
   font-weight: 300;
   line-height: 1.5rem;
   max-width: 53ch;
   text-align: left;
 }
+
 .post-item .imagem-item {
   padding-top: 1rem;
 }
+
 .post-item .imagem-item img {
   border-radius: 0.875rem;
 }
+
 .post-item .curtir-compartilhar span {
   font-size: 1.25rem;
 }
+
 .post-item .curtir-compartilhar .curtir {
   margin-top: 1rem;
   display: flex;
@@ -361,7 +449,7 @@ a {
 }
 
 @media(max-width: 768px) {
-  .comunidade-grid .post-item{
+  .comunidade-grid .post-item {
     width: 100%;
   }
 }
@@ -377,6 +465,7 @@ a {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .arrow-left:hover,
 .arrow-right:hover {
   background: #d9d9d9;
@@ -386,15 +475,17 @@ a {
   top: 60%;
   left: -1.2rem;
 }
+
 .arrow-right {
   top: 60%;
   right: -2rem;
 }
 
-@media(max-width: 768px){
+@media(max-width: 768px) {
   .arrow-left {
     left: -0.5rem;
   }
+
   .arrow-right {
     right: -0.5rem;
   }
@@ -413,6 +504,7 @@ a {
   font-weight: 600;
   color: var(--color-white);
 }
+
 .app-download .content .link-app {
   display: flex;
   gap: 2rem;
@@ -437,34 +529,41 @@ a {
     margin-bottom: 0;
   }
 }
-@media(max-width: 375px){
+
+@media(max-width: 375px) {
   .app-download .content .link-app {
     flex-direction: column;
   }
 }
+
 .footer {
   display: flex;
   justify-content: space-around;
   padding-bottom: 5rem;
 }
+
 .footer .left-content {
   display: flex;
   gap: 4rem;
 }
+
 .footer .left-content h1 {
   font-size: 1.5rem;
   font-weight: 600;
   padding-bottom: 1.5rem;
 }
+
 .footer .left-content a {
   display: block;
   margin-bottom: 0.5rem;
 }
+
 .footer .right-content h1 {
   font-size: 1.5rem;
   font-weight: 600;
   padding-bottom: 3rem;
 }
+
 .footer .right-content form input {
   padding: 0.6rem 1rem;
   width: 100%;
@@ -491,13 +590,16 @@ a {
     gap: 3rem;
     padding-top: 4rem;
   }
+
   .footer .right-content {
     order: 1;
   }
+
   .footer .left-content {
     order: 2;
     flex-direction: column;
   }
+
   .footer .right-content form input {
     width: max-content;
   }
