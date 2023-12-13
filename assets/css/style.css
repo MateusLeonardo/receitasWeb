@@ -106,6 +106,7 @@ a {
   display: inline-block;
   border-radius: 1.25rem;
   font-weight: 600;
+  width: max-content;
 }
 
 .right-content img {
@@ -124,7 +125,7 @@ a {
   .main .left-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
   }
 
   .main .left-content h1 {
@@ -150,6 +151,8 @@ a {
     max-width: 300px;
   }
 }
+
+
 
 .receitas {
   padding-bottom: 10.5rem;
@@ -252,6 +255,7 @@ a {
   .receitas header {
     flex-direction: column;
     text-align: left;
+    align-items: flex-start;
   }
 
   .receitas header .left-content h1 {
@@ -350,6 +354,7 @@ a {
 @media(max-width:768px) {
   .sobre {
     flex-direction: column;
+    gap: 0;
   }
 
   .sobre .right-content {
@@ -361,7 +366,20 @@ a {
   }
 }
 
+@media(max-width: 375px) {
+  .sobre .left-content .content {
+    padding: 10px;
+  }
 
+  .sobre .right-content {
+    padding: 10px;
+  }
+
+  .sobre .right-content .content h2:after {
+    top: -4rem;
+    right: -2rem;
+  }
+}
 
 
 .comunidade {
@@ -454,6 +472,16 @@ a {
   }
 }
 
+@media(max-width: 375px) {
+  .comunidade {
+    padding-top: 4rem;
+  }
+
+  .comunidade h1 {
+    font-size: 2.5rem;
+    padding-bottom: 3rem;
+  }
+}
 
 .arrow-left,
 .arrow-right {
@@ -527,12 +555,17 @@ a {
     flex-direction: column;
     padding: 3rem;
     margin-bottom: 0;
+    gap: 4rem;
   }
 }
 
 @media(max-width: 375px) {
   .app-download .content .link-app {
     flex-direction: column;
+  }
+
+  .app-download .content h1 {
+    font-size: 2rem;
   }
 }
 
@@ -586,7 +619,6 @@ a {
 @media(max-width:768px) {
   .footer {
     flex-direction: column;
-    align-items: center;
     gap: 3rem;
     padding-top: 4rem;
   }
@@ -602,5 +634,11 @@ a {
 
   .footer .right-content form input {
     width: max-content;
+  }
+}
+
+@media(max-width: 375px) {
+  .footer .right-content h1 {
+    font-size: 1.7rem;
   }
 }
