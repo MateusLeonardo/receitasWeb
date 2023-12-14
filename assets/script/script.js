@@ -23,3 +23,15 @@ function scrollSlider() {
   arrowLeft.addEventListener("click", scrollToLeft);
 }
 scrollSlider()
+
+
+const buttonMenuMobile = document.querySelector('.mobile-menu')
+
+
+function toggleMobileMenu() {
+  const nav = document.querySelector('.menu-nav')
+  nav.classList.toggle('ativo')
+  buttonMenuMobile.classList.toggle('ativo')
+}
+
+buttonMenuMobile.addEventListener('click', toggleMobileMenu)
