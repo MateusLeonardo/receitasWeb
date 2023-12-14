@@ -105,6 +105,9 @@ a {
   .menu-ul {
     flex-direction: column;
   }
+  .mobile-menu {
+    display: block;
+  }
   .mobile-menu.ativo {
     position: fixed;
   }
