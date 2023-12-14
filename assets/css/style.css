@@ -74,6 +74,7 @@ a {
   cursor: pointer;
 }
 .mobile-menu {
+  display: none;
   padding: 10px;
   z-index: 100;
   position: absolute;
