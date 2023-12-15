@@ -85,9 +85,13 @@ a {
   height: 3px;
   background: var(--color-secondary);
   margin-top: 5px;
+  transition: all 0.3s ease;
+}
+.login {
+  display: none;
 }
 
-@media(max-width: 375px) {
+@media (max-width: 375px) {
   .menu-nav {
     position: fixed;
     right: -100%;
@@ -98,6 +102,7 @@ a {
     background: var(--color-yellow);
     padding-top: 5rem;
     transition: all 0.4s ease;
+    z-index: 1;
   }
   .menu-nav.ativo {
     right: 0;
@@ -105,18 +110,26 @@ a {
   .menu-ul {
     flex-direction: column;
   }
-  .mobile-menu {
+  .mobile-menu,
+  .login {
     display: block;
   }
   .mobile-menu.ativo {
     position: fixed;
   }
+  .mobile-menu.ativo .bar:nth-child(2) {
+    display: none;
+  }
+  .mobile-menu.ativo .bar:first-child {
+    transform: rotate(-45deg) translateY(4px);;
+  }
+  .mobile-menu.ativo .bar:last-child {
+    transform: rotate(45deg) translateY(-5px);;
+  }
   .search-login {
     display: none;
   }
 }
-
-
 
 .main {
   display: flex;
@@ -169,7 +182,7 @@ a {
   }
 }
 
-@media(max-width: 375px) {
+@media (max-width: 375px) {
   .main .left-content {
     display: flex;
     flex-direction: column;
@@ -199,8 +212,6 @@ a {
     max-width: 300px;
   }
 }
-
-
 
 .receitas {
   padding-bottom: 10.5rem;
@@ -245,7 +256,7 @@ a {
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
 }
 
-.receita-card>img {
+.receita-card > img {
   border-radius: 1.25rem 1.25rem 0 0;
 }
 
@@ -299,7 +310,7 @@ a {
   }
 }
 
-@media(max-width: 375px) {
+@media (max-width: 375px) {
   .receitas header {
     flex-direction: column;
     text-align: left;
@@ -318,7 +329,6 @@ a {
 
   .receitas-container {
     grid-template-columns: 1fr;
-
   }
 }
 
@@ -399,7 +409,7 @@ a {
   color: var(--color-primary);
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .sobre {
     flex-direction: column;
     gap: 0;
@@ -414,7 +424,7 @@ a {
   }
 }
 
-@media(max-width: 375px) {
+@media (max-width: 375px) {
   .sobre .left-content .content {
     padding: 10px;
   }
@@ -428,7 +438,6 @@ a {
     right: -2rem;
   }
 }
-
 
 .comunidade {
   padding-top: 8rem;
@@ -514,13 +523,13 @@ a {
   gap: 0.5rem;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .comunidade-grid .post-item {
     width: 100%;
   }
 }
 
-@media(max-width: 375px) {
+@media (max-width: 375px) {
   .comunidade {
     padding-top: 4rem;
   }
@@ -557,7 +566,7 @@ a {
   right: -2rem;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .arrow-left {
     left: -0.5rem;
   }
@@ -607,7 +616,7 @@ a {
   }
 }
 
-@media(max-width: 375px) {
+@media (max-width: 375px) {
   .app-download .content .link-app {
     flex-direction: column;
   }
@@ -664,7 +673,7 @@ a {
   cursor: pointer;
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .footer {
     flex-direction: column;
     gap: 3rem;
@@ -685,7 +694,7 @@ a {
   }
 }
 
-@media(max-width: 375px) {
+@media (max-width: 375px) {
   .footer .right-content h1 {
     font-size: 1.7rem;
   }
