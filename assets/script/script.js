@@ -22,16 +22,42 @@ function scrollSlider() {
 
   arrowLeft.addEventListener("click", scrollToLeft);
 }
-scrollSlider()
+scrollSlider();
 
+function initMobileMenu() {
+  const buttonMenuMobile = document.querySelector(".mobile-menu");
 
-const buttonMenuMobile = document.querySelector('.mobile-menu')
+  function toggleMobileMenu() {
+    const nav = document.querySelector(".menu-nav");
+    nav.classList.toggle("ativo");
+    buttonMenuMobile.classList.toggle("ativo");
+  }
 
-
-function toggleMobileMenu() {
-  const nav = document.querySelector('.menu-nav')
-  nav.classList.toggle('ativo')
-  buttonMenuMobile.classList.toggle('ativo')
+  buttonMenuMobile.addEventListener("click", toggleMobileMenu);
 }
+initMobileMenu();
 
-buttonMenuMobile.addEventListener('click', toggleMobileMenu)
+function initAndCloseModalLogin() {
+  const accountIcon = document.querySelector(".search-login");
+  function toggleModalAccount() {
+    const modal = document.querySelector(".modal-login");
+    modal.classList.toggle("active");
+  }
+  accountIcon.addEventListener("click", toggleModalAccount);
+
+  const buttonCloseModal = document.querySelector(".close-modal");
+  function closeModal() {
+    const modal = document.querySelector(".modal-login");
+    modal.classList.remove("active");
+  }
+  buttonCloseModal.addEventListener("click", closeModal);
+
+  const modal = document.querySelector(".modal-login");
+  function clickOutsideModal(event) {
+    if (event.target === event.currentTarget) {
+      closeModal();
+    }
+  }
+  modal.addEventListener("click", clickOutsideModal);
+}
+initAndCloseModalLogin();
