@@ -276,6 +276,14 @@ a {
   font-weight: 500;
 }
 
+.receita-desc .tempo,
+.receita-desc .serve-quantas,
+.receita-desc .nivel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .receita-title {
   padding: 1rem 1rem 2rem;
 }
