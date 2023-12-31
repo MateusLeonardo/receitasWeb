@@ -91,6 +91,15 @@ a {
 .login {
   display: none;
 }
+.login-mobile-button  {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 600;
+}
 
 @media (max-width: 425px) {
   .header .logo {
