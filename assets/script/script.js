@@ -39,11 +39,20 @@ initMobileMenu();
 
 function initAndCloseModalLogin() {
   const accountIcon = document.querySelector(".search-login");
+  const loginMobileName = document.querySelector(".login-mobile-button");
+  const nav = document.querySelector(".menu-nav");
+  const buttonMenuMobile = document.querySelector(".mobile-menu");
+
   function toggleModalAccount() {
     const modal = document.querySelector(".modal-login");
     modal.classList.toggle("active");
+    if (nav.classList.contains("ativo")) {
+      nav.classList.toggle("ativo");
+      buttonMenuMobile.classList.toggle("ativo");
+    }
   }
   accountIcon.addEventListener("click", toggleModalAccount);
+  loginMobileName.addEventListener("click", toggleModalAccount);
 
   const buttonCloseModal = document.querySelector(".close-modal");
   function closeModal() {

@@ -76,6 +76,7 @@ a {
 .mobile-menu {
   display: none;
   padding: 10px;
+  top: 10px;
   z-index: 100;
   position: absolute;
   right: 1rem;
@@ -92,12 +93,15 @@ a {
 }
 
 @media (max-width: 425px) {
+  .header .logo {
+    padding-top: 10px;
+  }
   .menu-nav {
     position: fixed;
     right: -100%;
     top: 0;
     bottom: 0;
-    width: 60%;
+    width: 100%;
     padding: 1rem;
     background: var(--color-yellow);
     padding-top: 5rem;
@@ -124,7 +128,7 @@ a {
     transform: rotate(-45deg) translateY(4px);;
   }
   .mobile-menu.ativo .bar:last-child {
-    transform: rotate(45deg) translateY(-5px);;
+    transform: rotate(45deg) translateY(-6px);;
   }
   .search-login {
     display: none;
@@ -288,8 +292,8 @@ a {
   padding: 1rem 1rem 2rem;
 }
 
-.receita-title h1 {
-  font-size: 2rem;
+.receita-title .receita-nome {
+  font-size: 1.7rem;
   font-weight: 600;
   padding-bottom: 0.94rem;
 }
@@ -528,11 +532,19 @@ a {
   font-size: 1.25rem;
 }
 
-.post-item .curtir-compartilhar .curtir {
-  margin-top: 1rem;
+.post-item .curtir-compartilhar .curtir,
+.post-item .curtir-compartilhar .compartilhar {
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.curtir-compartilhar {
+  gap: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -781,3 +793,8 @@ a {
   filter: brightness(80%);
 }
 
+@media(max-width:768px) {
+  .modal-login-content form input {
+    width: initial;
+  }
+}
