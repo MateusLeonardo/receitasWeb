@@ -709,6 +709,7 @@ a {
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
+    align-items: center;
     gap: 3rem;
     padding-top: 4rem;
   }
@@ -719,7 +720,6 @@ a {
 
   .footer .left-content {
     order: 2;
-    flex-direction: column;
   }
 
   .footer .right-content form input {
@@ -731,8 +731,11 @@ a {
   .footer .right-content h1 {
     font-size: 1.7rem;
   }
+  .footer .left-content {
+    order: 2;
+    flex-wrap: wrap;
 }
-
+}
 
 .modal-login {
   display: none;
