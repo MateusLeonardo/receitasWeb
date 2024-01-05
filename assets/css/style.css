@@ -191,15 +191,24 @@ a {
   max-width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .main {
-    flex-direction: column;
-    padding-top: 0;
+    padding-top: 2rem;
     gap: 3rem;
+  }
+  .main .right-content img {
+    width: 450px;
+  }
+  .main .right-content {
+    display: flex;
+    align-items: center;
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
   .main .left-content {
     display: flex;
     flex-direction: column;
@@ -228,9 +237,17 @@ a {
   }
 
   .main .right-content img {
-    max-width: 300px;
+    max-width: 400px;
   }
 }
+
+@media(max-width: 425px) {
+  .main {
+    padding-top: 0;
+  }
+}
+
+
 
 .receitas {
   padding-bottom: 10.5rem;
@@ -623,7 +640,7 @@ a {
 }
 
 .app-download .content h1 {
-  font-size: 2.875rem;
+  font-size: 2.4rem;
   font-weight: 600;
   color: var(--color-white);
 }
@@ -644,11 +661,20 @@ a {
   border-radius: 1rem;
   gap: 10px;
 }
+.app-download .content,
+.app-download .img-iphone {
+  flex: 1;
+}
+.img-iphone {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
 
 @media (max-width: 768px) {
   .app-download {
     flex-direction: column;
-    padding: 3rem;
+    padding: 2rem;
     margin-bottom: 0;
     gap: 4rem;
   }
